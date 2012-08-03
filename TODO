@@ -1,2 +1,1 @@
-- use xargs instead of GNU parallel for parallel execution, more people have it installed
 - give path to ruby executable as parameter or think of another good way to integrate rvm setups

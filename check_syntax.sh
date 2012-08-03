@@ -99,13 +99,8 @@ if [ "$1" != "" ]; then
     fi
 else # default: check all files
     FILE_SOURCE="find [^.]* -name '*.rb'"
-    if $(which parallel &>/dev/null); then
-	echo "checking whole project in parallel mode"
-	EXECUTOR="parallel"
-    else
-	echo "checking whole project sequentially, install GNU parallel to change this"
-	EXECUTOR="xargs -n 1"
-    fi
+    echo "checking whole project in parallel mode"
+    EXECUTOR="xargs -P 0 -n 1"
 fi
 
 
