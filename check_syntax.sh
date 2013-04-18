@@ -98,7 +98,7 @@ if [ "$1" != "" ]; then
 	fi
     fi
 else # default: check all files
-    FILE_SOURCE="find [^.]* -name '*.rb'"
+    FILE_SOURCE="find ./[^.]* -name '*.rb'"
     echo "checking whole project in parallel mode"
     EXECUTOR="xargs -P 0 -n 1"
 fi
